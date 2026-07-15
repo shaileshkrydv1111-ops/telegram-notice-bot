@@ -1,0 +1,2 @@
+- [Scraper bot: WAF-blocked source](scraper-bot-waf-and-seeding.md) — samarth.edu.in-style WAFs can 403 the sandbox's egress IP regardless of headers; don't chase it with header hacks.
+- [Scraper bot: baseline seeding](scraper-bot-waf-and-seeding.md) — a monitoring bot must seed (mark-sent, not deliver) a site's existing items on first successful contact or it floods the channel on deploy.

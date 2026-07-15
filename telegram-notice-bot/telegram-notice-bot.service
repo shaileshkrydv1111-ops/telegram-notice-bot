@@ -1,0 +1,23 @@
+[Unit]
+Description=Telegram Notice Bot (university notice board monitor)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Change this to the actual deploy user and path on your VPS.
+User=ubuntu
+WorkingDirectory=/opt/telegram-notice-bot
+EnvironmentFile=/opt/telegram-notice-bot/.env
+ExecStart=/opt/telegram-notice-bot/venv/bin/python3 /opt/telegram-notice-bot/main.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/opt/telegram-notice-bot/logs/service.log
+StandardError=append:/opt/telegram-notice-bot/logs/service.log
+
+# Hardening (safe defaults; relax if they cause issues on your distro)
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

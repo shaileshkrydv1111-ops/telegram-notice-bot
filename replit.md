@@ -1,15 +1,17 @@
-# [Project name]
+# Telegram Notice Bot Project
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A monorepo containing a standalone Python bot (`telegram-notice-bot/`) that monitors three university notice-board websites and pushes new/updated notices to Telegram, plus the workspace's default API server and design canvas scaffolding.
 
 ## Run & Operate
 
+- `cd telegram-notice-bot && python3 main.py` — run the Telegram notice bot (also wired to the "Telegram Notice Bot" workflow)
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
+- Required secrets for the bot: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
 
 ## Stack
 
@@ -19,18 +21,23 @@ _Replace the heading above with the project's name, and this line with one sente
 - Validation: Zod (`zod/v4`), `drizzle-zod`
 - API codegen: Orval (from OpenAPI spec)
 - Build: esbuild (CJS bundle)
+- Telegram bot: Python 3.11, requests, BeautifulSoup4, PyMuPDF (see `telegram-notice-bot/README.md`)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `telegram-notice-bot/` — self-contained Python bot (not part of the pnpm workspace). See its own README for full details, systemd deployment, and env vars.
+- `telegram-notice-bot/scrapers/` — one independent scraper module per monitored site.
+- `telegram-notice-bot/database.json` — dedupe/update-detection state, auto-created.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The notice bot is a plain Python background worker (no web preview), run via a dedicated Replit workflow rather than an "artifact" since it has no UI.
+- Each site has its own scraper so one site failing (timeouts, layout changes, WAF blocks) never affects the others.
+- On a site's first successful check, its current notices are recorded as a baseline but not delivered, to avoid flooding the chat with the entire existing notice list on first deploy.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Telegram bot that watches ppup.ac.in, ppupadm.samarth.edu.in, and ancpatna.ac.in for new/updated notices and posts them to a configured Telegram chat within 5 minutes of publication, with PDFs delivered as images (≤5 pages) or documents (>5 pages).
 
 ## User preferences
 
@@ -38,7 +45,7 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- `ppupadm.samarth.edu.in` sits behind an AWS WAF that returns 403 to some data-center egress IPs regardless of headers/cookies — not fixable in code. It self-heals: the bot will seed its baseline automatically the first time it becomes reachable. Verify from the actual deployment host if this site keeps failing self-test.
 
 ## Pointers
 

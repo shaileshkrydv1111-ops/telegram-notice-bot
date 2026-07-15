@@ -1,0 +1,351 @@
+{
+  "ppup": {
+    "https://ppup.ac.in/details/56726": {
+      "hash": "3bdf1342b36c6df34eac547eb91a4b9c73a2ea54fdda978e648cb3c8813d6ea2",
+      "sent_at": "2026-07-15T04:52:22.061001+00:00"
+    },
+    "https://ppup.ac.in/details/56724": {
+      "hash": "c1c7f3dda3226bd5ffdb8e47f62b99758a73aa7f6458b2efa057a0684c39a5bb",
+      "sent_at": "2026-07-15T04:52:22.061562+00:00"
+    },
+    "https://ppup.ac.in/details/56725": {
+      "hash": "bd14a8f0e4d55bec26ab2426ce3473065fbd1e8bb593a86edcc9d05d7dd20ad0",
+      "sent_at": "2026-07-15T04:52:22.061859+00:00"
+    },
+    "https://ppup.ac.in/details/56723": {
+      "hash": "ea409e0d9daea84ad247290b8c1186e5ef883fcffdcbeb539cca3e37a2a11f7a",
+      "sent_at": "2026-07-15T04:52:22.062392+00:00"
+    },
+    "https://ppup.ac.in/details/56722": {
+      "hash": "7202561a91630a26b8d93b05cd0893cf22f5600968dd7b48c966b920273372b8",
+      "sent_at": "2026-07-15T04:52:22.062841+00:00"
+    },
+    "https://ppup.ac.in/details/56718": {
+      "hash": "6dd55a99b86f6c9d19f3de9dc7eafad217a39ea3077911e945a77743d3d9a940",
+      "sent_at": "2026-07-15T04:52:22.063379+00:00"
+    },
+    "https://ppup.ac.in/details/56719": {
+      "hash": "0420ea0dba51b858204198c604e5b3fbf5068d5746dbf3a59559692582012de1",
+      "sent_at": "2026-07-15T04:52:22.063748+00:00"
+    },
+    "https://ppup.ac.in/details/56720": {
+      "hash": "53af009ef09d03a73bf1025af3dbaf8aad2c9dddfa5dba42e474864304a886a0",
+      "sent_at": "2026-07-15T04:52:22.064143+00:00"
+    },
+    "https://ppup.ac.in/details/56721": {
+      "hash": "8e1156a994e734622507d1335a5b5819ae826afe10226a89019ce431ae55adb1",
+      "sent_at": "2026-07-15T04:52:22.064502+00:00"
+    },
+    "https://ppup.ac.in/details/56717": {
+      "hash": "9b293153e61e3ab72b9894db8b46fb681c17a9fb9012ac696b45580b369c98e8",
+      "sent_at": "2026-07-15T04:52:22.064845+00:00"
+    },
+    "https://ppup.ac.in/details/56712": {
+      "hash": "fe40e45ee1ca8ffec51d867c60b370fd533e3f88d2e61b5d511c7f4d28de06c9",
+      "sent_at": "2026-07-15T04:52:22.065251+00:00"
+    },
+    "https://ppup.ac.in/details/56713": {
+      "hash": "20a7cbf06b2ddc9877364d022fdcee7113ea6ac9bb9f543124aa9fe9f191897f",
+      "sent_at": "2026-07-15T04:52:22.065624+00:00"
+    },
+    "https://ppup.ac.in/details/56715": {
+      "hash": "e9f1d63e559707a553db5d4b8d34442da2ef3b1b6d2c41d74567eb50727f831b",
+      "sent_at": "2026-07-15T04:52:22.066004+00:00"
+    },
+    "https://ppup.ac.in/details/56710": {
+      "hash": "6d4b92b80ea5f2e6b3e9341e66b1c62d52b14c9634dfc35dc2f30bfd1af51c67",
+      "sent_at": "2026-07-15T04:52:22.066358+00:00"
+    },
+    "https://ppup.ac.in/details/56711": {
+      "hash": "6d4b92b80ea5f2e6b3e9341e66b1c62d52b14c9634dfc35dc2f30bfd1af51c67",
+      "sent_at": "2026-07-15T04:52:22.066670+00:00"
+    },
+    "https://ppup.ac.in/details/56709": {
+      "hash": "1cf3a9e415e8009a7c841e6fe046b64a680dd83bf1fd0a32018d4812ec90c7bb",
+      "sent_at": "2026-07-15T04:52:22.067025+00:00"
+    },
+    "https://ppup.ac.in/details/56704": {
+      "hash": "50db3a3d4be99dcd19f7e73bcf09ced2eedcd7c6f5cb4fe5372da61729248485",
+      "sent_at": "2026-07-15T04:52:22.067392+00:00"
+    },
+    "https://ppup.ac.in/details/56705": {
+      "hash": "9a6e50247f8e7467942d93fc6a77ba8c7fe4215c8f42e3f112cc5a6931fd209d",
+      "sent_at": "2026-07-15T04:52:22.067695+00:00"
+    },
+    "https://ppup.ac.in/details/56706": {
+      "hash": "8e684ac7ea8c2f6f22f6a54f3c3c784ef92a74d5f1029bb9408c05b768a57cd0",
+      "sent_at": "2026-07-15T04:52:22.068043+00:00"
+    },
+    "https://ppup.ac.in/details/56707": {
+      "hash": "0150b7bfbb794c12e8c521cba9103620ba13a7fbc9c2f84d7651b7729922667a",
+      "sent_at": "2026-07-15T04:52:22.068366+00:00"
+    },
+    "https://ppup.ac.in/details/56696": {
+      "hash": "611c0f953fa7926db12d7e78c06e1442a061d4db8d71be0a1c1d4858b5912b11",
+      "sent_at": "2026-07-15T04:52:22.068705+00:00"
+    },
+    "https://ppup.ac.in/details/56697": {
+      "hash": "f2c5b17813f7e8eeeeff93d9c694608b0221c5ed1b3334cf2f8ec42cb92597e7",
+      "sent_at": "2026-07-15T04:52:22.071277+00:00"
+    },
+    "https://ppup.ac.in/details/56703": {
+      "hash": "e626dcdba71688f14a319f04c5cf9f9e19431c92a52708cc106d43f8194eb496",
+      "sent_at": "2026-07-15T04:52:22.071687+00:00"
+    },
+    "https://ppup.ac.in/details/56708": {
+      "hash": "b23caa01010d4ecdd7f6f1fd4e78281add816c4f003bbf02653b141b7bd72c86",
+      "sent_at": "2026-07-15T04:52:22.072117+00:00"
+    },
+    "https://ppup.ac.in/details/56699": {
+      "hash": "2842aee906767ef7dc19876fe63d7d20929f73961fd7478d8f613e9626616228",
+      "sent_at": "2026-07-15T04:52:22.072521+00:00"
+    },
+    "https://ppup.ac.in/details/56695": {
+      "hash": "770c9d4db97a113defae0fcb6f507cdcca481cfe4f358ecfde3b87f9ded18c7b",
+      "sent_at": "2026-07-15T04:52:22.072957+00:00"
+    },
+    "https://ppup.ac.in/details/56698": {
+      "hash": "db4906597ba7921225166616a6f4a096b9d487fb209fa1bf0ff1e3060a061a67",
+      "sent_at": "2026-07-15T04:52:22.073365+00:00"
+    },
+    "https://ppup.ac.in/details/56700": {
+      "hash": "96478c12570dd1e8710591d69a7ecefd4afa7a131d33f6e7b636a77a355026ad",
+      "sent_at": "2026-07-15T04:52:22.073757+00:00"
+    },
+    "https://ppup.ac.in/details/56701": {
+      "hash": "29d0202b1196578306eb58c30effb9c22710b921f0dbd476477e0e23b4cc23bf",
+      "sent_at": "2026-07-15T04:52:22.074206+00:00"
+    },
+    "https://ppup.ac.in/details/56691": {
+      "hash": "31833af3bf3771a9d2b76e34ef504d2b8b6ad8ca710c39d1a84901ca907b9ec9",
+      "sent_at": "2026-07-15T04:52:22.074600+00:00"
+    },
+    "https://ppup.ac.in/details/56692": {
+      "hash": "f160cb6793cc6c8f8a95b240446d1ded206104935b7f48778ce3a4646ebafb33",
+      "sent_at": "2026-07-15T04:52:22.075089+00:00"
+    },
+    "https://ppup.ac.in/details/56689": {
+      "hash": "d562b3a2ea8c9ba272306affe01b61460fbe70e927655e71c625875b1973f97d",
+      "sent_at": "2026-07-15T04:52:22.075542+00:00"
+    },
+    "https://ppup.ac.in/details/56690": {
+      "hash": "85ee628421cb204d2e46cfda8dc9dfb1f40cd0d1f888c8f8e47bf1b2c373e2c9",
+      "sent_at": "2026-07-15T04:52:22.075993+00:00"
+    },
+    "https://ppup.ac.in/details/56688": {
+      "hash": "3df7d8497ff02312bbe6ce249b167b731d96fa61843ff3f192d19e16d65b410e",
+      "sent_at": "2026-07-15T04:52:22.076416+00:00"
+    },
+    "https://ppup.ac.in/details/56683": {
+      "hash": "f8d416a67f287ab0797990d8ad1e5892c158a33673b984b7a53fcc56b6b75a35",
+      "sent_at": "2026-07-15T04:52:22.076863+00:00"
+    },
+    "https://ppup.ac.in/details/56684": {
+      "hash": "c3bf9d613c1e331b44773422036a024e75349e977c3b00a7a5d1e51cb1e440b9",
+      "sent_at": "2026-07-15T04:52:22.077339+00:00"
+    },
+    "https://ppup.ac.in/details/56685": {
+      "hash": "b775db5082e88e30513044577358ca9ca33c4c294256700f3d1b29bd3362c026",
+      "sent_at": "2026-07-15T04:52:22.077787+00:00"
+    },
+    "https://ppup.ac.in/details/56686": {
+      "hash": "d9c3ad2c515b353f4e1ed699ebfafa2c71502cba903e06003affa7c569a277f0",
+      "sent_at": "2026-07-15T04:52:22.078241+00:00"
+    },
+    "https://ppup.ac.in/details/56687": {
+      "hash": "455ec3dbb29b111ecc98851f0290f5ed4066b7763953735f14ccef4c734b6e1d",
+      "sent_at": "2026-07-15T04:52:22.078714+00:00"
+    },
+    "https://ppup.ac.in/details/56681": {
+      "hash": "84ad49c55da9c82ef7a7c9a64a5c4e9286c9ac6b50576ba8f7116cf6480ccbcf",
+      "sent_at": "2026-07-15T04:52:22.079247+00:00"
+    },
+    "https://ppup.ac.in/details/56682": {
+      "hash": "b6ffa6cd11c6a4531c0b2b1b77571666511d4f196a67d6a0e9f40e91c87af3cd",
+      "sent_at": "2026-07-15T04:52:22.079699+00:00"
+    },
+    "https://ppup.ac.in/details/56679": {
+      "hash": "0346c515f9008672eed108a5d2b3aba70bf5627794f9249b76c443614865ee86",
+      "sent_at": "2026-07-15T04:52:22.080197+00:00"
+    },
+    "https://ppup.ac.in/details/56680": {
+      "hash": "d97f0a398f46e807d93a9b2db7d9f3e537c6580ae4fe8aaa4b38fb0a036affd0",
+      "sent_at": "2026-07-15T04:52:22.080667+00:00"
+    },
+    "https://ppup.ac.in/details/56676": {
+      "hash": "51570c8b0cc5a123e0e56b9d6c79a1e59db9022a99e59fac72fa01f72fe6458a",
+      "sent_at": "2026-07-15T04:52:22.081156+00:00"
+    },
+    "https://ppup.ac.in/details/56677": {
+      "hash": "0fb5210d36ec6b42ac5bca65d731383dfaf3a5ed2bd3bc96f3e4fbd8dde09c73",
+      "sent_at": "2026-07-15T04:52:22.081629+00:00"
+    },
+    "https://ppup.ac.in/details/56678": {
+      "hash": "88e003f54a1aab7a4e8747ffedc445099673e893fef2dc5a7b8719f8fa3fca5e",
+      "sent_at": "2026-07-15T04:52:22.082226+00:00"
+    },
+    "https://ppup.ac.in/details/56674": {
+      "hash": "fca683d774338069e8218268cb45446aa91db22748b47ddf9a2e15ff8a315b03",
+      "sent_at": "2026-07-15T04:52:22.082752+00:00"
+    },
+    "https://ppup.ac.in/details/56672": {
+      "hash": "71463c6848aa5cda1dfb71cba6c619b3b521fd9d80574f8b6729af1d997ce43e",
+      "sent_at": "2026-07-15T04:52:22.083352+00:00"
+    },
+    "https://ppup.ac.in/details/56673": {
+      "hash": "c246da65980e3c1ad6d8b76d425467d1d03dfd4bfa13a84627b5faf943b411c1",
+      "sent_at": "2026-07-15T04:52:22.083937+00:00"
+    },
+    "https://ppup.ac.in/details/56675": {
+      "hash": "2882701780183ebbabab1a9f8d91b5bfc80764bfdd3e58eca10717e5c11e8c98",
+      "sent_at": "2026-07-15T04:52:22.084480+00:00"
+    },
+    "https://ppup.ac.in/details/56669": {
+      "hash": "3db05e0f6ae7f0f00c957c41c3fc4362b3a6a0c4b850ed0ce3285fb5de404e25",
+      "sent_at": "2026-07-15T04:52:22.085064+00:00"
+    },
+    "https://ppup.ac.in/details/56670": {
+      "hash": "3db05e0f6ae7f0f00c957c41c3fc4362b3a6a0c4b850ed0ce3285fb5de404e25",
+      "sent_at": "2026-07-15T04:52:22.085603+00:00"
+    },
+    "https://ppup.ac.in/details/56671": {
+      "hash": "91d138eaa510b57d5d6394e378b9b52b83ea312594a9d9eed5e1274d47d8f105",
+      "sent_at": "2026-07-15T04:52:22.086183+00:00"
+    },
+    "https://ppup.ac.in/details/56668": {
+      "hash": "c47ef33ede4347af9f2db812ff91bb10f3c34960d56293b291b4b0517a8ca452",
+      "sent_at": "2026-07-15T04:52:22.086734+00:00"
+    },
+    "https://ppup.ac.in/details/56667": {
+      "hash": "b7319530e6b02cc2789cc67ae1d6d2801dbcb5b0d45fd01446b793c9ad0aea94",
+      "sent_at": "2026-07-15T04:52:22.087437+00:00"
+    },
+    "https://ppup.ac.in/details/56664": {
+      "hash": "671418df0112ff5745bc29e49ace02b13395b21c73fdf206eb9dcd675d6c4140",
+      "sent_at": "2026-07-15T04:52:22.088047+00:00"
+    },
+    "https://ppup.ac.in/details/56665": {
+      "hash": "f175dbbe92a87fe1ff426bac1c8a382941bc6a913b87328f6a8403f6da3f865c",
+      "sent_at": "2026-07-15T04:52:22.088626+00:00"
+    },
+    "https://ppup.ac.in/details/56666": {
+      "hash": "f175dbbe92a87fe1ff426bac1c8a382941bc6a913b87328f6a8403f6da3f865c",
+      "sent_at": "2026-07-15T04:52:22.089212+00:00"
+    },
+    "https://ppup.ac.in/details/56663": {
+      "hash": "f7c37032b43e0a4f3bc6375fd405df10475e4a9dcad1abe91a396f2603c6b2a2",
+      "sent_at": "2026-07-15T04:52:22.089753+00:00"
+    },
+    "https://ppup.ac.in/details/56662": {
+      "hash": "92b8b17fa020004e1d29101ac363414fa241cf3439427b0c7039468d70af52d7",
+      "sent_at": "2026-07-15T04:52:22.090340+00:00"
+    }
+  },
+  "ppupadm": {},
+  "ancpatna": {
+    "https://ancpatna.ac.in/news/EXAMINATION/955651084584": {
+      "hash": "ccdf37ada06365c8ca33972668de56ff4cb3b4514dc350ab39d89a210eb42cc1",
+      "sent_at": "2026-07-15T04:52:29.817883+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/955651054584": {
+      "hash": "eb1c5747793e6d82e9b826900c33bb2b9f174845e220c0b54806686cd036b764",
+      "sent_at": "2026-07-15T04:52:29.818923+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/955651004584": {
+      "hash": "72fa45f2ecad44f6b441295038add08c6c9ae01e8a7fc4d73569bc3a38a67c9e",
+      "sent_at": "2026-07-15T04:52:29.819511+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565964584": {
+      "hash": "ff192db66cb94c6fd8c505b4c54872aa87f74fc79da05c7527e4828180a6bd9f",
+      "sent_at": "2026-07-15T04:52:29.819946+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565954584": {
+      "hash": "724aa3d3eb2f5d0c79599df7b93280ccf0cd38f3ab73186397646ef80ad54955",
+      "sent_at": "2026-07-15T04:52:29.820297+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565934584": {
+      "hash": "8c9d2169158e08a472ffc8f3695b23e7de1e8db1156a71844dcf613c6ef49169",
+      "sent_at": "2026-07-15T04:52:29.820656+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565924584": {
+      "hash": "ae038c8cd972e61670ae05e4160d66df3257d366fe5241611ef57ef4e33ea13c",
+      "sent_at": "2026-07-15T04:52:29.821160+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565874584": {
+      "hash": "97e9f379500d4b535a9eb768dff99ea09020cf6b61cd1832a1156b81327313b8",
+      "sent_at": "2026-07-15T04:52:29.821820+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565864584": {
+      "hash": "77ece4a60d9cbd0ddc6179b27abadd905c33c29870e5f7c55cc7da8ff93691f1",
+      "sent_at": "2026-07-15T04:52:29.822315+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565824584": {
+      "hash": "2b1ae775108eef5665a1f48b2ee992c96889fd2c416efa556f5bb6f55f0f44a2",
+      "sent_at": "2026-07-15T04:52:29.822822+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565814584": {
+      "hash": "dd0bb6d85a90b62a56377136fa576c84cf03568ac5a90c1adfee1469f921f3a7",
+      "sent_at": "2026-07-15T04:52:29.823317+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565784584": {
+      "hash": "cc5b3b2b13ae7a410ddee51420d961182760cc960a6867fb99d2234c7db53795",
+      "sent_at": "2026-07-15T04:52:29.823940+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565764584": {
+      "hash": "8c24c922942c8fd95b38fba25d801bde0171f13f934bfb247e423671045770c0",
+      "sent_at": "2026-07-15T04:52:29.824557+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565704584": {
+      "hash": "7f25ce0091bf3b46ee0ce44398809f3c88c0ab85dfdfd75b2674011e6aa25c9b",
+      "sent_at": "2026-07-15T04:52:29.825190+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565644584": {
+      "hash": "ba2ad33b5dff08888a1523c9bd2fdea8845d02f967fbbc2cd346894b53d65135",
+      "sent_at": "2026-07-15T04:52:29.825610+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565634584": {
+      "hash": "9988b15bf82755ad92ef383482dcd51c24b14051ba0509d9b39a5729041a1d1e",
+      "sent_at": "2026-07-15T04:52:29.826063+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565624584": {
+      "hash": "d9d48be2f2ff6501fd80fb06c0ede0c1a83be488b2ce9016fb4162bfcee2924d",
+      "sent_at": "2026-07-15T04:52:29.826447+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565614584": {
+      "hash": "8b557342c3bcf3116823c1def9305cca395d4e1896dbe70b0f41002e24877ef9",
+      "sent_at": "2026-07-15T04:52:29.826845+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565604584": {
+      "hash": "c3200789f840082646f16e1253f47609fb4292212a21fe2bfdc227965a167980",
+      "sent_at": "2026-07-15T04:52:29.827306+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565594584": {
+      "hash": "84fc721e57150087c10944244bca984a587ea6bd25509f1377898517f1c8ec59",
+      "sent_at": "2026-07-15T04:52:29.827710+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565564584": {
+      "hash": "6a22f36c3786ebb388d0cbbaeb3d3fe5d80e78c0564d5dbef9a30a66e4147fb9",
+      "sent_at": "2026-07-15T04:52:29.828330+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565554584": {
+      "hash": "3607f403a46cf075c33553b448e6d9ac618775ec9d00fedd6d5bbf263abb2261",
+      "sent_at": "2026-07-15T04:52:29.829377+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565254584": {
+      "hash": "375def2ad9c17f05db4e3313c97c2040ff42d652bcf3a77513f7fc80cbc2e321",
+      "sent_at": "2026-07-15T04:52:29.829878+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565304584": {
+      "hash": "9e435b6f63c1fd98938f99dd65928adb7992ed2e35979781baeae007f3fbc3d1",
+      "sent_at": "2026-07-15T04:52:29.830305+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565314584": {
+      "hash": "c05f0e11b23ba209580f64d26248a1c6a0e7c0b390ec99e74c8d4f47420d856e",
+      "sent_at": "2026-07-15T04:52:29.830729+00:00"
+    },
+    "https://ancpatna.ac.in/news/EXAMINATION/95565324584": {
+      "hash": "cc334c0e9cf0360b1e7804450d102548f8a153a1082416321e273f2d26867b8a",
+      "sent_at": "2026-07-15T04:52:29.832523+00:00"
+    }
+  }
+}
