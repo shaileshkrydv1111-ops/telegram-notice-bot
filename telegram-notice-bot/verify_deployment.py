@@ -30,6 +30,7 @@ from __future__ import annotations
 import sys
 import traceback
 
+import browser_client
 import config
 import pdf_utils
 import telegram_sender
@@ -179,3 +180,5 @@ if __name__ == "__main__":
     except Exception:  # noqa: BLE001
         traceback.print_exc()
         sys.exit(1)
+    finally:
+        browser_client.shutdown()

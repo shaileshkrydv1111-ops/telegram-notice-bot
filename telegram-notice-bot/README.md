@@ -15,8 +15,23 @@ Monitored sources:
 - Each site has its own scraper module in `scrapers/`. A failure fetching
   one site (timeout, 5xx, layout change) is caught and logged; it never
   stops the other two sites or the process.
-- Every fetch goes through `http_client.py`, which retries with
-  exponential backoff before giving up on that cycle.
+- **ppup.ac.in** and **ppupadm.samarth.edu.in** are scraped with a real
+  headless **Chromium browser** via Playwright (`browser_client.py`).
+  Both sites are fetched from a single **persistent browser context** that
+  is launched once and reused for every subsequent check (across every
+  5-minute cycle), rather than a new browser per request. Each page load
+  waits for the `load` event, then for the network to go idle, and (for
+  the list pages) for the specific content selector to appear, before the
+  HTML is read — so JS-rendered content is guaranteed to be present before
+  parsing.
+- **ancpatna.ac.in** continues to use plain `requests` via
+  `http_client.py` — it already parses correctly without a browser, so
+  there's no reason to pay the extra overhead there.
+- Every non-browser fetch goes through `http_client.py`, which retries
+  with exponential backoff before giving up on that cycle. The browser
+  client uses the same retry/backoff policy and raises the same
+  `FetchError` type, so `main.py`'s per-site error handling is identical
+  regardless of which fetch mechanism a scraper uses.
 - `database.json` stores a hash of each notice's title, date, and
   attachment URL, keyed by a stable notice URL. If the hash changes (the
   notice was edited) even though the URL stayed the same, it is treated as
@@ -69,14 +84,15 @@ telegram-notice-bot/
 ├── config.py                  # env-driven configuration
 ├── notice.py                  # Notice data model (hash, sort key, formatting)
 ├── database.py                # JSON persistence, dedupe/update detection
-├── http_client.py             # shared retrying HTTP GET/download
+├── http_client.py             # shared retrying HTTP GET/download (requests)
+├── browser_client.py          # persistent Playwright Chromium client (ppup/ppupadm)
 ├── telegram_sender.py         # sendMessage / sendDocument / sendMediaGroup
 ├── pdf_utils.py                # PDF page count + high-quality rendering
 ├── logger_setup.py            # console + rotating file logging
 ├── scrapers/
-│   ├── ppup_scraper.py
-│   ├── ppupadm_scraper.py
-│   └── ancpatna_scraper.py
+│   ├── ppup_scraper.py        # Playwright (Chromium)
+│   ├── ppupadm_scraper.py     # Playwright (Chromium)
+│   └── ancpatna_scraper.py    # requests
 ├── database.json              # auto-created on first run
 ├── requirements.txt
 ├── .env.example
@@ -97,11 +113,26 @@ telegram-notice-bot/
      receive notices (e.g. from [@userinfobot](https://t.me/userinfobot); for
      channels, add the bot as an admin and use the channel's `-100...` id)
 
-2. Install dependencies:
+2. Install dependencies, then download the Playwright Chromium browser
+   (needed by the `ppup`/`ppupadm` scrapers — this is a one-time download,
+   separate from the pip package):
 
    ```bash
    pip install -r requirements.txt
+   playwright install chromium
    ```
+
+   Headless Chromium also needs a handful of OS-level shared libraries
+   (NSS, GTK, etc.) that aren't pulled in by pip. On a fresh Ubuntu VPS,
+   install them in the same step with:
+
+   ```bash
+   playwright install --with-deps chromium
+   ```
+
+   (`--with-deps` runs `apt-get install` for the required libraries; it
+   needs sudo/root. On Replit these system libraries are already
+   provisioned in the environment.)
 
 3. Run it:
 
@@ -128,6 +159,9 @@ cd /opt/telegram-notice-bot
 
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
+./venv/bin/playwright install --with-deps chromium
+# --with-deps installs the OS-level libraries headless Chromium needs
+# (via apt-get) as well as the browser binary itself; requires sudo.
 
 cp .env.example .env
 nano .env   # fill in TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID
@@ -147,10 +181,16 @@ automatically if it ever crashes, so it stays online 24×7.
 
 ## Notes on reliability
 
-- Retries: every HTTP request (site pages, PDFs, Telegram API calls)
-  retries up to `MAX_RETRIES` times with increasing backoff before that
-  attempt is given up on; it will simply be retried again on the next
-  5-minute cycle.
+- Retries: every HTTP request (site pages, PDFs, Telegram API calls) and
+  every browser page load (ppup/ppupadm) retries up to `MAX_RETRIES` times
+  with increasing backoff before that attempt is given up on; it will
+  simply be retried again on the next 5-minute cycle.
+- The Playwright browser is launched once and kept open for the life of
+  the process; it is closed cleanly on shutdown (`SIGTERM`/`SIGINT`, or
+  process exit) via `browser_client.shutdown()`. If Chromium itself
+  crashes mid-run, the next page-load attempt will fail with `FetchError`
+  and be retried/logged like any other fetch failure — it does not crash
+  the whole bot.
 - `database.json` grows over time (one entry per notice ever sent per
   site). This is expected and intentional — it is the permanent
   duplicate-prevention record. Back it up if you redeploy to a new host so

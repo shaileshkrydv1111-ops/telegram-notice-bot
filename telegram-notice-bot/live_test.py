@@ -12,6 +12,7 @@ through the actual production delivery pipeline (main.deliver_notice).
 
 from __future__ import annotations
 
+import browser_client
 from http_client import FetchError
 from logger_setup import log
 from main import deliver_notice
@@ -56,4 +57,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        browser_client.shutdown()

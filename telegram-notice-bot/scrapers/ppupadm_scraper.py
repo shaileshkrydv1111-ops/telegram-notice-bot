@@ -18,7 +18,7 @@ from __future__ import annotations
 
 from bs4 import BeautifulSoup
 
-from http_client import get
+from browser_client import get_html
 from logger_setup import log
 from notice import Notice
 
@@ -30,8 +30,8 @@ def fetch_notices(known_ids: set[str] | None = None) -> list[Notice]:
     # known_ids is unused here -- this site's list page already includes the
     # direct PDF link and date for every row, so no per-item detail fetch
     # (and therefore no need for windowed re-checking) is required.
-    response = get(LIST_URL)
-    soup = BeautifulSoup(response.text, "lxml")
+    html = get_html(LIST_URL, wait_selector="table")
+    soup = BeautifulSoup(html, "lxml")
 
     table = soup.find("table")
     if table is None:

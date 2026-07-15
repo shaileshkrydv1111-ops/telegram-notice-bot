@@ -241,7 +241,72 @@
       "sent_at": "2026-07-15T04:52:22.090340+00:00"
     }
   },
-  "ppupadm": {},
+  "ppupadm": {
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17840412242_admission_docs.pdf": {
+      "hash": "d788d93b523e2cc628cd89ab0499cfae90dc90e603f9e47830ba8ea1f1c3c25b",
+      "sent_at": "2026-07-15T05:39:02.327015+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17840067132_admission_docs.pdf": {
+      "hash": "151167b1844f840197635cff2caf8b2523b4ee393836ca7e6b978f95d3526e5a",
+      "sent_at": "2026-07-15T05:39:02.327877+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17833184272_admission_docs.pdf": {
+      "hash": "1f8364c687ca487073b0deade58a213afa6f6a48945a0deef2dcd75c8610bd96",
+      "sent_at": "2026-07-15T05:39:02.328645+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17830097382_admission_docs.pdf": {
+      "hash": "0457de44ac2d8d6ff175b84ee59e39cf03a6b94a7c5457a7e605f9f28b1bce9e",
+      "sent_at": "2026-07-15T05:39:02.329334+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17829008872_admission_docs.pdf": {
+      "hash": "336515606a823abebd3d487852fb48e5c1c7a1e0d57378000c572dc1c12ed032",
+      "sent_at": "2026-07-15T05:39:02.329956+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17821933902_admission_docs.pdf": {
+      "hash": "8848a59b8ec363c998b130c34cc07b14f7a25f73b2d4f101076e774d7eaea4e6",
+      "sent_at": "2026-07-15T05:39:02.330546+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17820978262_admission_docs.pdf": {
+      "hash": "0a90d6745aa560fd34d92b62ec21d4265f9574ccb9c83adfc0e955b2c950f8c1",
+      "sent_at": "2026-07-15T05:39:02.330928+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17835960652_admission_docs.pdf": {
+      "hash": "065a9aacd47a78980dfa4e4451a0ca3e8943925e839e7e61666b08b0ee373fa2",
+      "sent_at": "2026-07-15T05:39:02.331331+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17818506522_admission_docs.pdf": {
+      "hash": "cb390e1d977868e976f04c565edfd47077227234cae1178e7cb0e8e32472e9a3",
+      "sent_at": "2026-07-15T05:39:02.331778+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17811830732_admission_docs.pdf": {
+      "hash": "18c32d4f43a31e049a3d00659b0bad766eb38724eed7d8046566ead7807d07d8",
+      "sent_at": "2026-07-15T05:39:02.332322+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17807431732_admission_docs.pdf": {
+      "hash": "7cd3612068989fb45bd8a11a03a4f62a43740688e26789daf0066e981103adff",
+      "sent_at": "2026-07-15T05:39:02.332825+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17807438802_admission_docs.pdf": {
+      "hash": "907b94231a730ae2419c167ae956cf9383b0da32f8f720dc43953b44b659ee3b",
+      "sent_at": "2026-07-15T05:39:02.333403+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17801353202_admission_docs.pdf": {
+      "hash": "56a096a1f3f0fd108b6977d98a06d0d6f0cf12c74d1f096a512f1d45cf64385e",
+      "sent_at": "2026-07-15T05:39:02.334001+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17801274582_admission_docs.pdf": {
+      "hash": "c6f1f6622012bf9ec56741aed697ae2fc764cab03d5a9b3803de00d65fb7d019",
+      "sent_at": "2026-07-15T05:39:02.334571+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17792043392_admission_docs.pdf": {
+      "hash": "cdec1bfc086d874b05bca5706626ea3ca8cb8d38208f98e9c56be16122e8fccc",
+      "sent_at": "2026-07-15T05:39:02.335147+00:00"
+    },
+    "https://samarth-notification.s3.ap-south-1.amazonaws.com/ppup.samarth.ac.in/ppupadm/2026/adm/april/admissionjan26/406e14527e51f51326fab1f6db85f7bf71134a0f6a73d2feffe2af210119f9a42/17792034272_admission_docs.pdf": {
+      "hash": "0cad35f6bc9adccd0bb9bf66482a82ad2d67223dcd42ce42e719412d58bd13c4",
+      "sent_at": "2026-07-15T05:39:02.335754+00:00"
+    }
+  },
   "ancpatna": {
     "https://ancpatna.ac.in/news/EXAMINATION/955651084584": {
       "hash": "ccdf37ada06365c8ca33972668de56ff4cb3b4514dc350ab39d89a210eb42cc1",

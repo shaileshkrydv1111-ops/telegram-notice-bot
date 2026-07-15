@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 dependencies = [
     "beautifulsoup4>=4.15.0",
     "lxml>=6.1.1",
+    "playwright>=1.61.0",
     "pymupdf>=1.28.0",
     "python-dateutil>=2.9.0.post0",
     "python-dotenv>=1.2.2",

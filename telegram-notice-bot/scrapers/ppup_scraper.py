@@ -18,7 +18,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 import config
-from http_client import FetchError, get
+from browser_client import FetchError, get_html
 from logger_setup import log
 from notice import Notice
 
@@ -34,12 +34,12 @@ def _fetch_detail(detail_url: str) -> tuple[str | None, str | None]:
     and the caller falls back to the list-page data.
     """
     try:
-        response = get(detail_url)
+        html = get_html(detail_url)
     except FetchError as exc:
         log.warning("[ppup] Could not load detail page %s: %s", detail_url, exc)
         return None, None
 
-    soup = BeautifulSoup(response.text, "lxml")
+    soup = BeautifulSoup(html, "lxml")
 
     pdf_url = None
     pdf_link = soup.find("a", href=lambda h: h and h.lower().endswith(".pdf"))
@@ -71,8 +71,8 @@ def fetch_notices(known_ids: set[str] | None = None) -> list[Notice]:
     """
     known_ids = known_ids or set()
 
-    response = get(LIST_URL)
-    soup = BeautifulSoup(response.text, "lxml")
+    html = get_html(LIST_URL, wait_selector="ul.notice")
+    soup = BeautifulSoup(html, "lxml")
 
     notice_list = soup.find("ul", class_="notice")
     if notice_list is None:

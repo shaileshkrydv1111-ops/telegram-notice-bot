@@ -12,6 +12,7 @@ import sys
 import time
 from dataclasses import dataclass
 
+import browser_client
 import config
 import database
 import pdf_utils
@@ -227,8 +228,11 @@ def main() -> int:
         log.error(str(exc))
         return 1
 
-    run_self_test()
-    run_monitoring_loop()
+    try:
+        run_self_test()
+        run_monitoring_loop()
+    finally:
+        browser_client.shutdown()
     return 0
 
 
