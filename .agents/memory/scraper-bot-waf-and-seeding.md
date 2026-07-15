@@ -25,6 +25,19 @@ failure never blocks the others, and so the source self-heals (picks up
 normal operation, including any first-run baseline) automatically the
 first time it becomes reachable.
 
+A real headless-browser context (Playwright/Chromium, with a stealth init
+script overriding `navigator.webdriver`) occasionally got a 403-blocked
+`samarth.edu.in` page through when plain `requests` didn't — but retesting
+later from the same sandbox IP, it went back to a consistent 403 even with
+the browser, extra realistic headers (`Accept-Language`, `Accept`), and
+`--disable-blink-features=AutomationControlled`. Do not report a
+browser-based bypass as a durable fix from one success — it is IP-based
+and intermittent, not something the stealth script reliably controls. If a
+user reports one site working and another (on the same domain-block) not
+working after a browser migration, first suspect the deploy environment
+(e.g. Playwright/Chromium not actually installed there yet) before
+assuming the WAF logic itself changed.
+
 ## Baseline seeding on first contact
 
 A site-monitoring bot that alerts on "new" items must not treat "not yet
