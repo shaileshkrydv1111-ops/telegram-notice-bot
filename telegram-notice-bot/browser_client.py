@@ -29,6 +29,7 @@ import threading
 import time
 
 from playwright.sync_api import Browser, BrowserContext, Playwright, sync_playwright
+from playwright_stealth import Stealth
 
 import config
 from http_client import FetchError
@@ -41,11 +42,10 @@ _playwright: Playwright | None = None
 _browser: Browser | None = None
 _context: BrowserContext | None = None
 
-# Strip the most obvious headless/automation tells before any page script
-# runs, so sites that sniff `navigator.webdriver` etc. see a normal browser.
-_STEALTH_INIT_SCRIPT = """
-Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-"""
+# Full stealth profile — patches navigator.webdriver, plugins, languages,
+# WebGL vendor, chrome runtime, permissions, and dozens of other signals
+# that Cloudflare and other WAFs use to fingerprint headless browsers.
+_STEALTH = Stealth()
 
 # Chromium launch flags required for reliable headless operation on a Linux
 # VPS or container:
@@ -111,8 +111,14 @@ def _ensure_context() -> BrowserContext:
                 viewport={"width": 1366, "height": 768},
                 locale="en-US",
             )
-            _context.add_init_script(_STEALTH_INIT_SCRIPT)
-            log.info("[browser] Chromium launched; persistent context ready.")
+            # Apply full stealth profile to the persistent context —
+            # patches navigator.webdriver, plugins, languages, WebGL
+            # vendor, chrome runtime, permissions, and other signals that
+            # Cloudflare (cf-mitigated: challenge) uses to fingerprint
+            # headless browsers. Applied once here so every page that
+            # opens in this context inherits the stealth init scripts.
+            _STEALTH.apply_stealth_sync(_context)
+            log.info("[browser] Chromium launched; persistent context ready (stealth on).")
             return _context
         except Exception as exc:  # noqa: BLE001
             # Tear down whatever was partially created so the next call
