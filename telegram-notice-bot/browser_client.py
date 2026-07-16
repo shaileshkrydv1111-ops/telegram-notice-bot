@@ -54,7 +54,28 @@ def _ensure_context() -> BrowserContext:
 
         log.info("[browser] Launching persistent Chromium instance...")
         _playwright = sync_playwright().start()
-        _browser = _playwright.chromium.launch(headless=True)
+        try:
+            _browser = _playwright.chromium.launch(headless=True)
+        except Exception as exc:  # noqa: BLE001
+            # This is almost always a missing-OS-dependency error on a
+            # fresh Linux host (libnss3, libatk, libgbm, etc. not
+            # installed), not a Python/pip problem. Surface a clear,
+            # actionable message instead of a bare Playwright traceback,
+            # since `pip install playwright` alone does not pull these in.
+            log.error(
+                "[browser] Chromium failed to launch: %s\n"
+                "This is usually caused by missing OS-level libraries, not a pip issue.\n"
+                "Fix: run `python3 -m playwright install --with-deps chromium` "
+                "(needs sudo on Ubuntu) and restart the bot. "
+                "See README.md 'Troubleshooting: Chromium fails to launch on a VPS'.",
+                exc,
+            )
+            try:
+                _playwright.stop()
+            except Exception:  # noqa: BLE001
+                pass
+            _playwright = None
+            raise
         _context = _browser.new_context(
             user_agent=config.USER_AGENT,
             viewport={"width": 1366, "height": 768},

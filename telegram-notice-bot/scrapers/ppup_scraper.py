@@ -18,6 +18,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 import config
+import http_client
 from browser_client import FetchError, get_html
 from logger_setup import log
 from notice import Notice
@@ -27,6 +28,20 @@ LIST_URL = "https://ppup.ac.in/notice-board"
 BASE_URL = "https://ppup.ac.in"
 
 
+def _get_page(url: str, *, wait_selector: str | None = None) -> str:
+    """Fetch a page via Playwright browser first; fall back to requests if
+    the browser is unavailable (e.g. Chromium not installed on the host).
+    Returns the HTML as a string.
+    """
+    try:
+        return get_html(url, wait_selector=wait_selector)
+    except Exception as exc:  # noqa: BLE001
+        log.warning(
+            "[ppup] Browser fetch failed for %s (%s); falling back to requests.", url, exc
+        )
+        return http_client.get(url).text
+
+
 def _fetch_detail(detail_url: str) -> tuple[str | None, str | None]:
     """Returns (pdf_url, updated_on_text) from a notice detail page.
 
@@ -34,7 +49,7 @@ def _fetch_detail(detail_url: str) -> tuple[str | None, str | None]:
     and the caller falls back to the list-page data.
     """
     try:
-        html = get_html(detail_url)
+        html = _get_page(detail_url)
     except FetchError as exc:
         log.warning("[ppup] Could not load detail page %s: %s", detail_url, exc)
         return None, None
@@ -71,7 +86,7 @@ def fetch_notices(known_ids: set[str] | None = None) -> list[Notice]:
     """
     known_ids = known_ids or set()
 
-    html = get_html(LIST_URL, wait_selector="ul.notice")
+    html = _get_page(LIST_URL, wait_selector="ul.notice")
     soup = BeautifulSoup(html, "lxml")
 
     notice_list = soup.find("ul", class_="notice")

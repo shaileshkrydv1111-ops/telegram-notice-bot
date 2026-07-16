@@ -204,3 +204,50 @@ automatically if it ever crashes, so it stays online 24×7.
   If a site consistently self-test-fails with `403 Forbidden` from a given
   host, try again from a different network/VPS; the retry logic will pick
   it back up automatically once the site is reachable.
+
+## Troubleshooting: ppup/ppupadm fail while ancpatna works
+
+`ppup.ac.in` and `ppupadm.samarth.edu.in` are the only two sites that need
+the Playwright Chromium browser; `ancpatna.ac.in` uses plain `requests` and
+has no such dependency. So if ancpatna keeps working while the other two
+fail, the browser itself is the problem on that host — almost always one of:
+
+1. **Chromium's OS-level dependencies aren't installed.** Running only
+   `playwright install chromium` downloads the browser binary but not the
+   shared libraries it needs (`libnss3`, `libatk-1.0-0`, `libgbm1`, etc.).
+   Without them, Chromium fails to launch entirely, so *every* fetch that
+   goes through `browser_client.py` fails — which is exactly the "ppup and
+   ppupadm both broken, ancpatna fine" pattern. Fix (needs sudo/root):
+
+   ```bash
+   sudo ./venv/bin/python3 -m playwright install --with-deps chromium
+   # or, if not using a venv:
+   sudo python3 -m playwright install --with-deps chromium
+   ```
+
+   `--with-deps` is required — plain `playwright install chromium` only
+   fetches the browser binary, not the apt packages. Re-run
+   `sudo systemctl restart telegram-notice-bot` afterward.
+
+2. **`pip install -r requirements.txt` wasn't re-run after pulling this
+   version**, so the `playwright` Python package itself is missing. This
+   raises an `ImportError` on startup rather than a Chromium launch error.
+
+3. **A per-site cause** — e.g. `ppupadm.samarth.edu.in`'s WAF blocking this
+   specific host's IP (see above), or that site's page taking longer than
+   `REQUEST_TIMEOUT_SECONDS` to render.
+
+To tell these apart without guessing, run the built-in diagnostic script
+from the project directory (same Python/venv the service uses):
+
+```bash
+python3 diagnose_browser.py
+```
+
+It launches Chromium standalone, then fetches both `ppup.ac.in` and
+`ppupadm.samarth.edu.in` directly, and writes a full report to
+`diagnose_browser_report.txt`. Paste that file's contents when asking for
+help — "Chromium failed to launch" points to cause 1 above, an
+`ImportError: No module named 'playwright'` points to cause 2, and a
+`FetchError`/timeout only on `ppupadm` (with `ppup` succeeding) points to
+cause 3.
