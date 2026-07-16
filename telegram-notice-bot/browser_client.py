@@ -161,7 +161,16 @@ def get_html(url: str, *, timeout: int | None = None, wait_selector: str | None 
         try:
             context = _ensure_context()
             page = context.new_page()
-            page.goto(url, wait_until="load", timeout=timeout_ms)
+            resp = page.goto(url, wait_until="load", timeout=timeout_ms)
+            # Fail fast on hard 4xx blocks (403, 401, 404) — waiting for a
+            # content selector on a 403 page just wastes 30 s per attempt.
+            if resp is not None and resp.status in (401, 403, 404):
+                raise FetchError(
+                    f"Server returned HTTP {resp.status} for {url}. "
+                    f"This usually means the university's server is blocking "
+                    f"this host's IP address. Check connectivity with: "
+                    f"curl -I {url}"
+                )
             page.wait_for_load_state("networkidle", timeout=timeout_ms)
             if wait_selector:
                 page.wait_for_selector(wait_selector, timeout=timeout_ms)
